@@ -12,7 +12,7 @@ const News = (props) => {
     setLoading(true);
     try {
       let response = await fetch(
-        `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=3cf6ffddc2f740578032e9891f0a7b32&page=${page}`
+        `https://newsapi.org/v2/everything?q=tesla&from=2024-05-15&sortBy=publishedAt&apiKey=3cf6ffddc2f740578032e9891f0a7b32`
       );
       let data = await response.json();
       setTotalResults(data.totalResults);
